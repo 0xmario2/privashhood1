@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta property="og:title" content="Privashhood | Privacy-First Research on Robinhood Chain">
+  <meta property="og:description" content="The first trusted research platform built natively for Robinhood Chain.">
+  <meta property="og:image" content="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201500%20500%22%20width%3D%221500%22%20height%3D%22500%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23060d08%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23090e0a%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23050b07%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gGreen%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2321ce62%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2255%25%22%20stop-color%3D%22%230dff7a%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%237fffa6%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gGreenText%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%220%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2321ce62%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%230dff7a%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%237fffa6%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22lineGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%220%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2321ce62%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22rgba(33%2C206%2C98%2C0)%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3CradialGradient%20id%3D%22glow1%22%20cx%3D%2250%25%22%20cy%3D%2250%25%22%20r%3D%2250%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2321ce62%22%20stop-opacity%3D%220.22%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%2321ce62%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%3C%2FradialGradient%3E%0A%20%20%20%20%3CradialGradient%20id%3D%22glow2%22%20cx%3D%2250%25%22%20cy%3D%2250%25%22%20r%3D%2250%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2321ce62%22%20stop-opacity%3D%220.12%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%2321ce62%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%3C%2FradialGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22blur1%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%2260%22%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3Cfilter%20id%3D%22blur2%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%2230%22%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3Cfilter%20id%3D%22textGlow%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%228%22%20result%3D%22b%22%2F%3E%0A%20%20%20%20%20%20%3CfeMerge%3E%3CfeMergeNode%20in%3D%22b%22%2F%3E%3CfeMergeNode%20in%3D%22SourceGraphic%22%2F%3E%3C%2FfeMerge%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3Cfilter%20id%3D%22iconGlow%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%224%22%20result%3D%22b%22%2F%3E%0A%20%20%20%20%20%20%3CfeMerge%3E%3CfeMergeNode%20in%3D%22b%22%2F%3E%3CfeMergeNode%20in%3D%22SourceGraphic%22%2F%3E%3C%2FfeMerge%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3C!--%20grid%20--%3E%0A%20%20%20%20%3Cpattern%20id%3D%22grid%22%20width%3D%2248%22%20height%3D%2248%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M%2048%200%20L%200%200%200%2048%22%20fill%3D%22none%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.055)%22%20stroke-width%3D%220.8%22%2F%3E%0A%20%20%20%20%3C%2Fpattern%3E%0A%20%20%20%20%3C!--%20dot%20grid%20--%3E%0A%20%20%20%20%3Cpattern%20id%3D%22dots%22%20width%3D%2232%22%20height%3D%2232%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%221%22%20cy%3D%221%22%20r%3D%221%22%20fill%3D%22rgba(33%2C206%2C98%2C0.12)%22%2F%3E%0A%20%20%20%20%3C%2Fpattern%3E%0A%20%20%20%20%3CclipPath%20id%3D%22clip%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%221500%22%20height%3D%22500%22%2F%3E%0A%20%20%20%20%3C%2FclipPath%3E%0A%20%20%3C%2Fdefs%3E%0A%0A%20%20%3Cg%20clip-path%3D%22url(%23clip)%22%3E%0A%20%20%20%20%3C!--%20base%20--%3E%0A%20%20%20%20%3Crect%20width%3D%221500%22%20height%3D%22500%22%20fill%3D%22url(%23bgGrad)%22%2F%3E%0A%20%20%20%20%3C!--%20grid%20--%3E%0A%20%20%20%20%3Crect%20width%3D%221500%22%20height%3D%22500%22%20fill%3D%22url(%23grid)%22%2F%3E%0A%0A%20%20%20%20%3C!--%20ambient%20glows%20--%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22250%22%20rx%3D%22520%22%20ry%3D%22380%22%20fill%3D%22url(%23glow1)%22%20filter%3D%22url(%23blur1)%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%221350%22%20cy%3D%22180%22%20rx%3D%22340%22%20ry%3D%22260%22%20fill%3D%22url(%23glow2)%22%20filter%3D%22url(%23blur1)%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22750%22%20cy%3D%22500%22%20rx%3D%22600%22%20ry%3D%22200%22%20fill%3D%22rgba(33%2C206%2C98%2C0.04)%22%20filter%3D%22url(%23blur1)%22%2F%3E%0A%0A%20%20%20%20%3C!--%20decorative%20circles%20right%20side%20--%3E%0A%20%20%20%20%3Ccircle%20cx%3D%221250%22%20cy%3D%22250%22%20r%3D%22280%22%0A%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.06)%22%20stroke-width%3D%221.5%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%221250%22%20cy%3D%22250%22%20r%3D%22200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.04)%22%20stroke-width%3D%221%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%221250%22%20cy%3D%22250%22%20r%3D%22120%22%0A%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.08)%22%20stroke-width%3D%221%22%2F%3E%0A%20%20%20%20%3C!--%20inner%20circle%20fill%20--%3E%0A%20%20%20%20%3Ccircle%20cx%3D%221250%22%20cy%3D%22250%22%20r%3D%2280%22%0A%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22rgba(33%2C206%2C98%2C0.04)%22%2F%3E%0A%0A%20%20%20%20%3C!--%20shield%20%2F%20icon%20--%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(1170%2C%20170)%22%3E%0A%20%20%20%20%20%20%3C!--%20shield%20path%20--%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M80%2010%20L145%2040%20L145%20110%20Q145%20170%2080%20200%20Q15%20170%2015%20110%20L15%2040%20Z%22%0A%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22rgba(33%2C206%2C98%2C0.08)%22%20stroke%3D%22url(%23gGreen)%22%20stroke-width%3D%221.8%22%0A%20%20%20%20%20%20%20%20%20%20%20%20filter%3D%22url(%23iconGlow)%22%2F%3E%0A%20%20%20%20%20%20%3C!--%20eye%20--%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%2280%22%20cy%3D%22108%22%20rx%3D%2222%22%20ry%3D%2214%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22%2321ce62%22%20stroke-width%3D%222%22%20opacity%3D%220.9%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2280%22%20cy%3D%22108%22%20r%3D%227%22%20fill%3D%22url(%23gGreen)%22%20filter%3D%22url(%23iconGlow)%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2280%22%20cy%3D%22108%22%20r%3D%223%22%20fill%3D%22%23090e0a%22%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%2262%22%20y1%3D%2290%22%20x2%3D%2298%22%20y2%3D%22128%22%0A%20%20%20%20%20%20%20%20%20%20%20%20stroke%3D%22%2321ce62%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.5%22%2F%3E%0A%20%20%20%20%20%20%3C!--%20dot%20--%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%22130%22%20cy%3D%22174%22%20r%3D%227%22%20fill%3D%22%2321ce62%22%20filter%3D%22url(%23iconGlow)%22%20opacity%3D%220.9%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%22130%22%20cy%3D%22174%22%20r%3D%223.5%22%20fill%3D%22%23090e0a%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%22130%22%20cy%3D%22174%22%20r%3D%222%22%20fill%3D%22%2321ce62%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%0A%20%20%20%20%3C!--%20dot%20grid%20overlay%20right%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22900%22%20y%3D%220%22%20width%3D%22600%22%20height%3D%22500%22%20fill%3D%22url(%23dots)%22%20opacity%3D%220.5%22%2F%3E%0A%0A%20%20%20%20%3C!--%20left%20accent%20line%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2280%22%20y%3D%22200%22%20width%3D%223%22%20height%3D%22120%22%20rx%3D%222%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22url(%23lineGrad)%22%2F%3E%0A%0A%20%20%20%20%3C!--%20%E2%94%80%E2%94%80%20MAIN%20TEXT%20%E2%94%80%E2%94%80%20--%3E%0A%20%20%20%20%3C!--%20badge%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22120%22%20y%3D%22120%22%20width%3D%22330%22%20height%3D%2232%22%20rx%3D%2216%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22rgba(33%2C206%2C98%2C0.12)%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.3)%22%20stroke-width%3D%221%22%2F%3E%0A%20%20%20%20%3C!--%20badge%20dot%20--%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22139%22%20cy%3D%22136%22%20r%3D%225%22%20fill%3D%22%2321ce62%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22139%22%20cy%3D%22136%22%20r%3D%229%22%20fill%3D%22rgba(33%2C206%2C98%2C0)%22%20stroke%3D%22%2321ce62%22%20stroke-width%3D%221%22%0A%20%20%20%20%20%20%20%20%20%20%20%20opacity%3D%220.5%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22155%22%20y%3D%22141%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2212%22%20font-weight%3D%22700%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22%2321ce62%22%20letter-spacing%3D%222%22%3EROBINHOOD%20CHAIN%20NATIVE%3C%2Ftext%3E%0A%0A%20%20%20%20%3C!--%20main%20wordmark%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22116%22%20y%3D%22270%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%22112%22%20font-weight%3D%22800%22%0A%20%20%20%20%20%20%20%20%20%20letter-spacing%3D%22-4%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22%23f0f5f0%22%3EPriva%3C%2Ftext%3E%0A%0A%20%20%20%20%3Ctext%20x%3D%22508%22%20y%3D%22270%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%22112%22%20font-weight%3D%22800%22%0A%20%20%20%20%20%20%20%20%20%20letter-spacing%3D%22-4%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22url(%23gGreenText)%22%0A%20%20%20%20%20%20%20%20%20%20filter%3D%22url(%23textGlow)%22%3Eshh%3C%2Ftext%3E%0A%0A%20%20%20%20%3Ctext%20x%3D%22704%22%20y%3D%22270%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%22112%22%20font-weight%3D%22800%22%0A%20%20%20%20%20%20%20%20%20%20letter-spacing%3D%22-4%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22%23f0f5f0%22%3Eood%3C%2Ftext%3E%0A%0A%20%20%20%20%3C!--%20tagline%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22120%22%20y%3D%22318%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'Inter'%2C%20system-ui%2C%20sans-serif%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2217%22%20font-weight%3D%22400%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22%236e7f70%22%20letter-spacing%3D%220.3%22%3EPrivacy-first%20research%20platform%20built%20natively%20on%20Robinhood%20Chain%3C%2Ftext%3E%0A%0A%20%20%20%20%3C!--%20divider%20line%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22120%22%20y%3D%22345%22%20width%3D%22600%22%20height%3D%221%22%20rx%3D%220.5%22%20fill%3D%22rgba(33%2C206%2C98%2C0.2)%22%2F%3E%0A%0A%20%20%20%20%3C!--%20stats%20row%20--%3E%0A%20%20%20%20%3C!--%20stat%201%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22120%22%20y%3D%22382%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2222%22%20font-weight%3D%22800%22%20fill%3D%22%2321ce62%22%3E100%25%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22120%22%20y%3D%22402%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'Inter'%2C%20system-ui%2C%20sans-serif%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2211%22%20font-weight%3D%22600%22%20fill%3D%22%234a5a4c%22%20letter-spacing%3D%221.5%22%3EPRIVATE%3C%2Ftext%3E%0A%0A%20%20%20%20%3Crect%20x%3D%22228%22%20y%3D%22368%22%20width%3D%221%22%20height%3D%2240%22%20fill%3D%22rgba(255%2C255%2C255%2C0.08)%22%2F%3E%0A%0A%20%20%20%20%3C!--%20stat%202%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22248%22%20y%3D%22382%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2222%22%20font-weight%3D%22800%22%20fill%3D%22%2321ce62%22%3E28K%2B%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22248%22%20y%3D%22402%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'Inter'%2C%20system-ui%2C%20sans-serif%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2211%22%20font-weight%3D%22600%22%20fill%3D%22%234a5a4c%22%20letter-spacing%3D%221.5%22%3EUSERS%3C%2Ftext%3E%0A%0A%20%20%20%20%3Crect%20x%3D%22346%22%20y%3D%22368%22%20width%3D%221%22%20height%3D%2240%22%20fill%3D%22rgba(255%2C255%2C255%2C0.08)%22%2F%3E%0A%0A%20%20%20%20%3C!--%20stat%203%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22366%22%20y%3D%22382%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2222%22%20font-weight%3D%22800%22%20fill%3D%22%2321ce62%22%3E0%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22366%22%20y%3D%22402%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'Inter'%2C%20system-ui%2C%20sans-serif%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2211%22%20font-weight%3D%22600%22%20fill%3D%22%234a5a4c%22%20letter-spacing%3D%221.5%22%3EDATA%20SHARED%3C%2Ftext%3E%0A%0A%20%20%20%20%3Crect%20x%3D%22484%22%20y%3D%22368%22%20width%3D%221%22%20height%3D%2240%22%20fill%3D%22rgba(255%2C255%2C255%2C0.08)%22%2F%3E%0A%0A%20%20%20%20%3C!--%20stat%204%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22504%22%20y%3D%22382%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2222%22%20font-weight%3D%22800%22%20fill%3D%22%2321ce62%22%3ELive%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22504%22%20y%3D%22402%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'Inter'%2C%20system-ui%2C%20sans-serif%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2211%22%20font-weight%3D%22600%22%20fill%3D%22%234a5a4c%22%20letter-spacing%3D%221.5%22%3EMAINNET%3C%2Ftext%3E%0A%0A%20%20%20%20%3C!--%20URL%20bottom%20right%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%221380%22%20y%3D%22472%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2212%22%20font-weight%3D%22600%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22%233a4a3c%22%20text-anchor%3D%22end%22%20letter-spacing%3D%221%22%3Eprivashhood.com%3C%2Ftext%3E%0A%0A%20%20%20%20%3C!--%20outer%20border%20--%3E%0A%20%20%20%20%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%221498.5%22%20height%3D%22498.5%22%20fill%3D%22none%22%0A%20%20%20%20%20%20%20%20%20%20stroke%3D%22rgba(33%2C206%2C98%2C0.12)%22%20stroke-width%3D%221.5%22%2F%3E%0A%0A%20%20%20%20%3C!--%20corner%20accents%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%200%2030%20L%200%200%20L%2030%200%22%20fill%3D%22none%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.5)%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%201500%2030%20L%201500%200%20L%201470%200%22%20fill%3D%22none%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.5)%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%200%20470%20L%200%20500%20L%2030%20500%22%20fill%3D%22none%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.5)%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%201500%20470%20L%201500%20500%20L%201470%20500%22%20fill%3D%22none%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.5)%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privashhood | Privacy-First Research on Robinhood Chain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── DESIGN TOKENS ───────────────────────────────── */
+    :root {
+      --green:        #21ce62;
+      --green-d:      #1aad53;
+      --green-2:      #0dff7a;
+      --bg:           #090e0a;
+      --bg-1:         #0d1410;
+      --bg-2:         #111a13;
+      --glass:        rgba(255,255,255,.04);
+      --glass-b:      rgba(255,255,255,.08);
+      --border:       rgba(255,255,255,.07);
+      --border-g:     rgba(33,206,98,.25);
+      --txt:          #f0f5f0;
+      --txt-2:        #9eada0;
+      --txt-3:        #5c6b5e;
+      --mono:         "JetBrains Mono", monospace;
+      --sans:         "Inter", system-ui, sans-serif;
+      --r-sm:         10px;
+      --r-md:         16px;
+      --r-lg:         22px;
+      --r-xl:         32px;
+      --shadow-g:     0 0 40px rgba(33,206,98,.15);
+      --shadow-card:  0 8px 32px rgba(0,0,0,.35);
+    }
+
+    /* ─── RESET ───────────────────────────────────────── */
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      background: var(--bg);
+      color: var(--txt);
+      font-family: var(--sans);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ─── NOISE OVERLAY ───────────────────────────────── */
+    body::before {
+      content: "";
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; opacity:.4;
+    }
+
+    /* ─── GRID BG ─────────────────────────────────────── */
+    .grid-bg {
+      position: fixed; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(33,206,98,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(33,206,98,.04) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, black, transparent);
+    }
+
+    /* ─── GLOW BLOBS ──────────────────────────────────── */
+    .blob {
+      position: fixed; border-radius: 50%;
+      filter: blur(120px); pointer-events: none; z-index: 0;
+    }
+    .blob-1 {
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(33,206,98,.12), transparent 70%);
+      top: -200px; left: -150px;
+      animation: float1 18s ease-in-out infinite;
+    }
+    .blob-2 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(33,206,98,.07), transparent 70%);
+      bottom: 10%; right: -100px;
+      animation: float2 22s ease-in-out infinite;
+    }
+    @keyframes float1 {
+      0%,100% { transform: translate(0,0) scale(1); }
+      33%      { transform: translate(60px,40px) scale(1.05); }
+      66%      { transform: translate(-30px,70px) scale(.95); }
+    }
+    @keyframes float2 {
+      0%,100% { transform: translate(0,0) scale(1); }
+      50%      { transform: translate(-60px,-40px) scale(1.08); }
+    }
+
+    /* ─── LAYOUT ──────────────────────────────────────── */
+    .wrap { max-width: 1240px; margin: 0 auto; padding: 0 28px; position:relative; z-index:1; }
+
+    /* ─── NAV ─────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      padding: 0;
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(24px) saturate(1.4);
+      background: rgba(9,14,10,.82);
+      transition: box-shadow .3s;
+    }
+    nav.scrolled { box-shadow: 0 1px 32px rgba(0,0,0,.5); }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .logo {
+      font-family: var(--mono);
+      font-size: 22px; font-weight: 800;
+      letter-spacing: -.02em;
+      display: flex; align-items: center; gap: 2px;
+      transition: opacity .2s;
+    }
+    .logo:hover { opacity: .8; }
+    .logo .g { color: var(--green); }
+    .logo .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--green);
+      margin-left: 4px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% { box-shadow: 0 0 0 0 rgba(33,206,98,.5); }
+      50%      { box-shadow: 0 0 0 6px rgba(33,206,98,0); }
+    }
+    .nav-links {
+      display: flex; gap: 6px; align-items: center;
+    }
+    .nav-links a {
+      padding: 8px 14px;
+      font-size: 14px; font-weight: 500;
+      color: var(--txt-2);
+      border-radius: var(--r-sm);
+      transition: color .2s, background .2s;
+    }
+    .nav-links a:hover { color: var(--txt); background: var(--glass); }
+    .nav-cta {
+      padding: 9px 20px !important;
+      background: var(--green) !important;
+      color: #000 !important;
+      font-weight: 700 !important;
+      border-radius: var(--r-sm) !important;
+      box-shadow: 0 0 20px rgba(33,206,98,.2);
+      transition: transform .2s, box-shadow .2s !important;
+    }
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 24px rgba(33,206,98,.35) !important;
+      background: var(--green-2) !important;
+    }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 8px; border-radius: var(--r-sm);
+      background: var(--glass); border: 1px solid var(--border);
+    }
+    .hamburger span {
+      width: 22px; height: 2px;
+      background: var(--txt); border-radius: 2px;
+      transition: .3s;
+    }
+    .mob-menu {
+      display: none; flex-direction: column; gap: 4px;
+      padding: 12px 16px 16px;
+      border-top: 1px solid var(--border);
+      background: rgba(9,14,10,.97);
+    }
+    .mob-menu a {
+      padding: 12px 16px; border-radius: var(--r-sm);
+      font-size: 15px; font-weight: 500; color: var(--txt-2);
+      transition: background .2s, color .2s;
+    }
+    .mob-menu a:hover { background: var(--glass); color: var(--txt); }
+    .mob-menu .nav-cta {
+      background: var(--green) !important;
+      color: #000 !important; text-align: center;
+      margin-top: 4px;
+    }
+    @media(max-width:820px){
+      .nav-links { display:none; }
+      .hamburger { display:flex; }
+      .mob-menu.open { display:flex; }
+    }
+
+    /* ─── HERO ────────────────────────────────────────── */
+    .hero {
+      padding: 160px 0 100px;
+      text-align: center;
+      position: relative;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 18px;
+      background: rgba(33,206,98,.1);
+      border: 1px solid var(--border-g);
+      border-radius: 40px;
+      font-size: 13px; font-weight: 600;
+      color: var(--green);
+      letter-spacing: .04em;
+      margin-bottom: 32px;
+      animation: fadeUp .8s ease both;
+    }
+    .hero-badge .ping {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--green);
+      position: relative;
+    }
+    .hero-badge .ping::after {
+      content:""; position:absolute; inset:-4px;
+      border-radius:50%; border:1px solid var(--green);
+      animation: ping 1.5s ease-in-out infinite;
+    }
+    @keyframes ping {
+      0%   { opacity:1; transform:scale(1); }
+      100% { opacity:0; transform:scale(2.2); }
+    }
+
+    .hero-title {
+      font-family: var(--mono);
+      font-size: clamp(56px,10vw,104px);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      line-height: 1;
+      margin-bottom: 28px;
+      animation: fadeUp .8s .1s ease both;
+    }
+    .hero-title .g {
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-2) 60%, #7fff9e 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-title .dim { color: var(--txt-3); }
+
+    .hero-sub {
+      font-size: clamp(16px,2.2vw,20px);
+      color: var(--txt-2); max-width: 760px;
+      margin: 0 auto 48px;
+      font-weight: 400; line-height: 1.7;
+      animation: fadeUp .8s .2s ease both;
+    }
+
+    .hero-btns {
+      display: flex; gap: 14px; justify-content: center;
+      flex-wrap: wrap; margin-bottom: 80px;
+      animation: fadeUp .8s .3s ease both;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 30px;
+      border-radius: var(--r-md);
+      font-size: 15px; font-weight: 700;
+      cursor: pointer; border: none;
+      transition: transform .2s, box-shadow .2s, background .2s;
+    }
+    .btn-primary {
+      background: var(--green); color: #000;
+      box-shadow: 0 4px 24px rgba(33,206,98,.25);
+    }
+    .btn-primary:hover {
+      background: var(--green-2);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(33,206,98,.4);
+    }
+    .btn-ghost {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      color: var(--txt);
+      backdrop-filter: blur(8px);
+    }
+    .btn-ghost:hover {
+      border-color: var(--border-g);
+      background: rgba(33,206,98,.06);
+      transform: translateY(-2px);
+    }
+
+    /* ─── STATS ───────────────────────────────────────── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 16px;
+      animation: fadeUp .8s .4s ease both;
+    }
+    @media(max-width:700px){ .stats-row { grid-template-columns: 1fr 1fr; } }
+    .stat-card {
+      padding: 28px 20px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      text-align: center;
+      backdrop-filter: blur(12px);
+      transition: border-color .3s, transform .3s, box-shadow .3s;
+      position: relative; overflow: hidden;
+    }
+    .stat-card::before {
+      content:""; position:absolute; inset:0;
+      background: linear-gradient(135deg, rgba(33,206,98,.06) 0%, transparent 60%);
+      opacity: 0; transition: opacity .3s;
+    }
+    .stat-card:hover { border-color: var(--border-g); transform: translateY(-4px); box-shadow: var(--shadow-g); }
+    .stat-card:hover::before { opacity: 1; }
+    .stat-num {
+      font-family: var(--mono);
+      font-size: 36px; font-weight: 800;
+      color: var(--green);
+      margin-bottom: 6px;
+      display: block;
+    }
+    .stat-lbl {
+      font-size: 12px; font-weight: 600;
+      color: var(--txt-3);
+      text-transform: uppercase; letter-spacing: .08em;
+    }
+
+    /* ─── SECTION BASE ────────────────────────────────── */
+    .section { padding: 96px 0; border-top: 1px solid var(--border); }
+    .sh {
+      text-align: center; margin-bottom: 64px;
+    }
+    .sh-label {
+      font-family: var(--mono); font-size: 12px; font-weight: 700;
+      color: var(--green); text-transform: uppercase; letter-spacing: .1em;
+      margin-bottom: 16px;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+    }
+    .sh-label::before,.sh-label::after {
+      content:""; flex:1; max-width: 60px; height:1px; background: var(--border-g);
+    }
+    .sh-title {
+      font-size: clamp(32px,5vw,52px); font-weight: 800;
+      letter-spacing: -.02em; line-height: 1.15;
+      margin-bottom: 18px;
+    }
+    .sh-desc {
+      font-size: 17px; color: var(--txt-2);
+      max-width: 640px; margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    /* ─── REVEAL ANIMATION ────────────────────────────── */
+    .reveal {
+      opacity: 0; transform: translateY(32px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-d1 { transition-delay: .1s; }
+    .reveal-d2 { transition-delay: .2s; }
+    .reveal-d3 { transition-delay: .3s; }
+    .reveal-d4 { transition-delay: .4s; }
+    .reveal-d5 { transition-delay: .5s; }
+    .reveal-d6 { transition-delay: .6s; }
+
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(20px); }
+      to   { opacity:1; transform:none; }
+    }
+
+    /* ─── FEATURES ────────────────────────────────────── */
+    .feat-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
+    @media(max-width:900px){ .feat-grid { grid-template-columns:1fr 1fr; } }
+    @media(max-width:540px){ .feat-grid { grid-template-columns:1fr; } }
+    .feat-card {
+      padding: 36px 32px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      position: relative; overflow: hidden;
+      backdrop-filter: blur(12px);
+      transition: border-color .3s, transform .3s, box-shadow .3s;
+      cursor: default;
+    }
+    .feat-card::after {
+      content:""; position:absolute;
+      inset:0; border-radius: var(--r-lg);
+      background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(33,206,98,.08), transparent 60%);
+      opacity:0; transition:opacity .3s; pointer-events:none;
+    }
+    .feat-card:hover { border-color: var(--border-g); transform:translateY(-5px); box-shadow:var(--shadow-card); }
+    .feat-card:hover::after { opacity:1; }
+    .feat-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: rgba(33,206,98,.12);
+      border: 1px solid rgba(33,206,98,.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; margin-bottom: 22px;
+    }
+    .feat-title {
+      font-size: 18px; font-weight: 700;
+      margin-bottom: 10px; letter-spacing: -.01em;
+    }
+    .feat-text { font-size: 14px; color: var(--txt-2); line-height: 1.75; }
+
+    /* ─── TOKENOMICS ──────────────────────────────────── */
+    .tok-layout {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 48px; align-items: start;
+    }
+    @media(max-width:860px){ .tok-layout { grid-template-columns:1fr; } }
+
+    .tok-item {
+      display: flex; align-items: center; gap: 16px;
+      padding: 18px 22px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      margin-bottom: 12px;
+      transition: border-color .25s, background .25s;
+      position: relative; overflow: hidden;
+    }
+    .tok-item:last-child { margin-bottom: 0; }
+    .tok-item:hover { border-color: var(--border-g); background: rgba(33,206,98,.04); }
+    .tok-dot {
+      width: 12px; height: 12px; border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .tok-bar-wrap {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+      background: rgba(255,255,255,.04);
+    }
+    .tok-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--green), var(--green-2));
+      border-radius: 2px;
+    }
+    .tok-name { font-size: 14px; font-weight: 600; flex: 1; }
+    .tok-pct {
+      font-family: var(--mono); font-size: 16px; font-weight: 800; color: var(--green);
+    }
+
+    /* donut chart */
+    .donut-wrap {
+      position: relative; width: 240px; height: 240px;
+      margin: 0 auto 32px;
+    }
+    .donut-wrap svg { transform: rotate(-90deg); }
+    .donut-center {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+    }
+    .donut-center .dc-num {
+      font-family: var(--mono); font-size: 32px; font-weight: 800; color: var(--green);
+    }
+    .donut-center .dc-lbl {
+      font-size: 11px; font-weight: 600; color: var(--txt-3);
+      text-transform: uppercase; letter-spacing: .08em;
+    }
+
+    .tok-info-card {
+      padding: 36px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      backdrop-filter: blur(12px);
+    }
+    .tok-info-card h3 {
+      font-size: 20px; font-weight: 800; margin-bottom: 20px;
+    }
+    .tok-info-list { display: flex; flex-direction: column; gap: 12px; }
+    .tok-info-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 14px; color: var(--txt-2); line-height: 1.6;
+    }
+    .tok-info-list li::before {
+      content: "→"; color: var(--green); font-weight: 700;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .tok-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 24px; color: var(--green); font-size: 14px; font-weight: 700;
+      padding: 8px 16px;
+      border: 1px solid rgba(33,206,98,.3); border-radius: var(--r-sm);
+      transition: background .2s, transform .2s;
+    }
+    .tok-link:hover { background: rgba(33,206,98,.08); transform: translateX(2px); }
+
+    /* ─── ROADMAP ─────────────────────────────────────── */
+    .rm-track {
+      position: relative;
+      max-width: 860px; margin: 0 auto;
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .rm-track::before {
+      content:""; position:absolute;
+      left: 25px; top: 0; bottom: 0; width: 2px;
+      background: linear-gradient(to bottom, var(--green), rgba(33,206,98,.1));
+    }
+    .rm-item {
+      display: flex; gap: 32px; align-items: flex-start;
+      padding: 0 0 40px 0;
+      position: relative;
+    }
+    .rm-item:last-child { padding-bottom: 0; }
+    .rm-dot {
+      flex-shrink: 0; width: 52px; height: 52px;
+      border-radius: 50%; z-index: 1;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 13px; font-weight: 800;
+    }
+    .rm-dot.done {
+      background: var(--green); color: #000;
+      box-shadow: 0 0 20px rgba(33,206,98,.4);
+    }
+    .rm-dot.active {
+      background: rgba(33,206,98,.15);
+      border: 2px solid var(--green);
+      color: var(--green);
+      animation: activePulse 2s ease-in-out infinite;
+    }
+    .rm-dot.pending {
+      background: var(--bg-1);
+      border: 2px solid var(--border);
+      color: var(--txt-3);
+    }
+    @keyframes activePulse {
+      0%,100% { box-shadow: 0 0 0 0 rgba(33,206,98,.4); }
+      50%      { box-shadow: 0 0 0 8px rgba(33,206,98,0); }
+    }
+    .rm-body {
+      flex: 1;
+      padding: 14px 28px 28px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      transition: border-color .3s;
+    }
+    .rm-item:hover .rm-body { border-color: var(--border-g); }
+    .rm-status {
+      font-family: var(--mono); font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .1em;
+      margin-bottom: 8px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .rm-status.done { color: var(--green); }
+    .rm-status.active { color: #f0b429; }
+    .rm-status.pending { color: var(--txt-3); }
+    .rm-status .indicator {
+      width: 6px; height: 6px; border-radius: 50%;
+    }
+    .rm-status.done .indicator { background: var(--green); }
+    .rm-status.active .indicator { background: #f0b429; animation: ping 1.5s infinite; }
+    .rm-status.pending .indicator { background: var(--txt-3); }
+    .rm-title {
+      font-size: 19px; font-weight: 800; margin-bottom: 8px;
+      letter-spacing: -.01em;
+    }
+    .rm-desc { font-size: 14px; color: var(--txt-2); line-height: 1.75; }
+    .rm-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+    .rm-tag {
+      font-size: 12px; font-weight: 600; padding: 4px 12px;
+      border-radius: 40px;
+      background: rgba(33,206,98,.08);
+      border: 1px solid rgba(33,206,98,.15);
+      color: var(--green);
+    }
+
+    /* ─── PARTNERS ────────────────────────────────────── */
+    .partners-bar {
+      overflow: hidden; position: relative;
+    }
+    .partners-bar::before,.partners-bar::after {
+      content:""; position:absolute; top:0; bottom:0; width:120px; z-index:2;
+      pointer-events:none;
+    }
+    .partners-bar::before { left:0; background:linear-gradient(to right, var(--bg), transparent); }
+    .partners-bar::after  { right:0; background:linear-gradient(to left, var(--bg), transparent); }
+    .partners-scroll {
+      display: flex; gap: 64px; align-items: center;
+      padding: 20px 0;
+      animation: scroll 22s linear infinite;
+      width: max-content;
+    }
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .partners-scroll:hover { animation-play-state: paused; }
+    .p-logo {
+      font-family: var(--mono); font-size: 15px; font-weight: 700;
+      color: var(--txt-3); white-space: nowrap;
+      transition: color .25s;
+    }
+    .p-logo:hover { color: var(--green); }
+
+    /* ─── TEAM ────────────────────────────────────────── */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
+    @media(max-width:860px){ .team-grid { grid-template-columns:1fr 1fr; } }
+    @media(max-width:540px){ .team-grid { grid-template-columns:1fr; } }
+    .team-card {
+      padding: 36px 28px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      text-align: center;
+      transition: border-color .3s, transform .3s, box-shadow .3s;
+    }
+    .team-card:hover { border-color: var(--border-g); transform:translateY(-5px); box-shadow:var(--shadow-g); }
+    .team-avatar {
+      width: 80px; height: 80px; border-radius: 50%;
+      margin: 0 auto 18px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 32px;
+      position: relative;
+    }
+    .team-avatar .av-ring {
+      position: absolute; inset: -3px; border-radius: 50%;
+      border: 2px solid transparent;
+      background: linear-gradient(var(--bg), var(--bg)) padding-box,
+                  linear-gradient(135deg, var(--green), transparent) border-box;
+    }
+    .team-name { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
+    .team-role {
+      font-size: 12px; font-weight: 700; color: var(--green);
+      text-transform: uppercase; letter-spacing: .06em; margin-bottom: 14px;
+    }
+    .team-bio { font-size: 13px; color: var(--txt-2); line-height: 1.75; margin-bottom: 20px; }
+    .team-handle {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 600; color: var(--txt-3);
+      padding: 6px 14px; border-radius: 40px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border);
+      transition: all .2s;
+    }
+    .team-handle:hover { color: var(--green); border-color: var(--border-g); }
+
+    /* ─── ABOUT / CTA BANNER ──────────────────────────── */
+    .cta-banner {
+      margin: 0;
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
+    }
+    .cta-inner {
+      background: linear-gradient(135deg, rgba(33,206,98,.1) 0%, rgba(33,206,98,.03) 100%);
+      border: 1px solid var(--border-g);
+      border-radius: var(--r-xl);
+      padding: 72px 64px;
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .cta-inner::before {
+      content:""; position:absolute; top:-50%; left:50%; transform:translateX(-50%);
+      width:600px; height:300px;
+      background: radial-gradient(ellipse, rgba(33,206,98,.12), transparent 70%);
+      pointer-events:none;
+    }
+    .cta-inner h2 { font-size: clamp(28px,4vw,44px); font-weight:800; margin-bottom:16px; }
+    .cta-inner p { font-size:17px; color:var(--txt-2); max-width:540px; margin:0 auto 36px; }
+    .cta-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+    /* ─── FOOTER ──────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 56px 0 36px;
+    }
+    .foot-top {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      flex-wrap: wrap; gap: 32px; margin-bottom: 48px;
+    }
+    .foot-brand .logo { font-size: 20px; margin-bottom: 12px; }
+    .foot-brand p { font-size: 13px; color: var(--txt-3); max-width: 260px; line-height: 1.7; }
+    .foot-cols {
+      display: flex; gap: 48px; flex-wrap: wrap;
+    }
+    .foot-col h4 {
+      font-size: 12px; font-weight: 700;
+      color: var(--txt-3); text-transform: uppercase; letter-spacing: .1em;
+      margin-bottom: 16px;
+    }
+    .foot-col a {
+      display: block; font-size: 14px; color: var(--txt-2);
+      margin-bottom: 10px; transition: color .2s;
+    }
+    .foot-col a:hover { color: var(--green); }
+    .foot-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
+      padding-top: 24px; border-top: 1px solid var(--border);
+    }
+    .foot-bottom p { font-size: 13px; color: var(--txt-3); }
+    .foot-socials { display: flex; gap: 8px; }
+    .foot-socials a {
+      width: 36px; height: 36px; border-radius: var(--r-sm);
+      background: var(--glass); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; color: var(--txt-2);
+      transition: all .2s;
+    }
+    .foot-socials a:hover { border-color: var(--border-g); color: var(--green); }
+
+    /* ─── SCROLLBAR ───────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--border-g); }
+
+    /* ─── UTILITY ─────────────────────────────────────── */
+    .text-green { color: var(--green); }
+    .mt-6 { margin-top: 6px; }
+    @media(max-width:600px){
+      .cta-inner { padding: 44px 28px; }
+      .foot-top { flex-direction: column; }
+      .foot-bottom { flex-direction: column; text-align: center; }
+    }
+  
+    /* ─── DOWNLOAD GRID MOBILE ────────────────────────── */
+    @media(max-width:640px){ .dl-grid { grid-template-columns:1fr !important; } }
+
+  </style>
+</head>
+<body>
+
+<!-- Background layers -->
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="blob blob-1" aria-hidden="true"></div>
+<div class="blob blob-2" aria-hidden="true"></div>
+
+<!-- ───── NAV ───── -->
+<nav id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="logo">
+      Priva<span class="g">shh</span>ood
+      <span class="dot"></span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#tokenomics">Tokenomics</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="app.html" target="_blank">Docs</a></li>
+      <li><a href="app.html" target="_blank" class="nav-cta">Launch App ↗</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mob-menu" id="mob-menu">
+    <a href="#features">Features</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#team">Team</a>
+    <a href="app.html" target="_blank">Docs</a>
+    <a href="app.html" target="_blank" class="nav-cta">Launch App ↗</a>
+  </div>
+</nav>
+
+<!-- ───── HERO ───── -->
+<main>
+<section class="hero wrap" id="top">
+  <div class="hero-badge">
+    <span class="ping"></span>
+    Built exclusively on Robinhood Chain — Privacy-First Research
+  </div>
+
+  <h1 class="hero-title">
+    Priva<span class="g">shh</span>ood
+  </h1>
+
+  <p class="hero-sub">
+    The first trusted research platform built natively for Robinhood Chain.
+    Verified market insights, clear analysis, and reliable data —
+    all while keeping your queries and personal information fully private.
+  </p>
+
+  <div class="hero-btns">
+    <a href="app.html" target="_blank" class="btn btn-primary">
+      Launch Application
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <a href="app.html" target="_blank" class="btn btn-ghost">
+      Read Whitepaper
+    </a>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <span class="stat-num" style="font-size:22px;">Soon</span>
+      <p class="stat-lbl">Token Launch</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">0</span>
+      <p class="stat-lbl">Data Collected</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num" style="font-size:22px;">Open</span>
+      <p class="stat-lbl">Early Access</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num" style="font-size:22px;">RH</span>
+      <p class="stat-lbl">Native Chain</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───── FEATURES ───── -->
+<section id="features" class="section">
+  <div class="wrap">
+    <div class="sh reveal">
+      <p class="sh-label">Core Features</p>
+      <h2 class="sh-title">Simple, Safe, Built for You</h2>
+      <p class="sh-desc">Designed to work seamlessly with Robinhood Chain — no complicated setup, no hidden tracking, just clear answers you can trust.</p>
+    </div>
+
+    <div class="feat-grid">
+      <div class="feat-card reveal reveal-d1">
+        <div class="feat-icon">🔒</div>
+        <h3 class="feat-title">Your Data Stays Yours</h3>
+        <p class="feat-text">We never track what you search, never sell your information, and never link your activity to your identity. Zero data collection.</p>
+      </div>
+      <div class="feat-card reveal reveal-d2">
+        <div class="feat-icon">🌐</div>
+        <h3 class="feat-title">Robinhood Chain Native</h3>
+        <p class="feat-text">Runs fully on Robinhood Chain infrastructure — fast, low-cost, and fully compatible with all RH Chain tools and wallets.</p>
+      </div>
+      <div class="feat-card reveal reveal-d3">
+        <div class="feat-icon">📜</div>
+        <h3 class="feat-title">Verified & Transparent</h3>
+        <p class="feat-text">Every insight comes from trusted sources and is permanently recorded on-chain — you always know exactly where it comes from.</p>
+      </div>
+      <div class="feat-card reveal reveal-d4">
+        <div class="feat-icon">🤝</div>
+        <h3 class="feat-title">Community Driven</h3>
+        <p class="feat-text">Updates and improvements are shaped by users like you — no outside company controls how we grow or what we prioritize.</p>
+      </div>
+      <div class="feat-card reveal reveal-d5">
+        <div class="feat-icon">⚡</div>
+        <h3 class="feat-title">Instant Clear Reports</h3>
+        <p class="feat-text">Turn any question into simple, structured breakdowns — no confusing jargon, no extra fluff. Answers in seconds.</p>
+      </div>
+      <div class="feat-card reveal reveal-d6">
+        <div class="feat-icon">💳</div>
+        <h3 class="feat-title">Easy & Private Access</h3>
+        <p class="feat-text">Pay with RH Chain tokens or standard stablecoins — no extra forms, no unnecessary personal details required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── TOKENOMICS ───── -->
+<section id="tokenomics" class="section">
+  <div class="wrap">
+    <div class="sh reveal">
+      <p class="sh-label">Token Details</p>
+      <h2 class="sh-title">Fair &amp; Clear Distribution</h2>
+      <p class="sh-desc">Total supply fixed permanently — no extra coins created later, no hidden allocations, no surprises.</p>
+    </div>
+
+    <div class="tok-layout">
+      <!-- Left: list -->
+      <div class="reveal reveal-d1">
+        <div class="tok-item">
+          <span class="tok-dot" style="background:#21ce62"></span>
+          <span class="tok-name">User Rewards &amp; Access</span>
+          <span class="tok-pct">40%</span>
+          <div class="tok-bar-wrap"><div class="tok-bar" style="width:40%"></div></div>
+        </div>
+        <div class="tok-item">
+          <span class="tok-dot" style="background:#1aad53"></span>
+          <span class="tok-name">Ecosystem &amp; Partnerships</span>
+          <span class="tok-pct">25%</span>
+          <div class="tok-bar-wrap"><div class="tok-bar" style="width:25%"></div></div>
+        </div>
+        <div class="tok-item">
+          <span class="tok-dot" style="background:#0dff7a"></span>
+          <span class="tok-name">Team &amp; Contributors <span style="color:var(--txt-3);font-size:12px;">(Locked)</span></span>
+          <span class="tok-pct">15%</span>
+          <div class="tok-bar-wrap"><div class="tok-bar" style="width:15%"></div></div>
+        </div>
+        <div class="tok-item">
+          <span class="tok-dot" style="background:#53d68a"></span>
+          <span class="tok-name">Liquidity &amp; Reserve</span>
+          <span class="tok-pct">15%</span>
+          <div class="tok-bar-wrap"><div class="tok-bar" style="width:15%"></div></div>
+        </div>
+        <div class="tok-item">
+          <span class="tok-dot" style="background:#9effc3"></span>
+          <span class="tok-name">Public Launch</span>
+          <span class="tok-pct">5%</span>
+          <div class="tok-bar-wrap"><div class="tok-bar" style="width:5%"></div></div>
+        </div>
+
+        <!-- Donut -->
+        <div class="donut-wrap" style="margin-top:36px;">
+          <svg width="240" height="240" viewBox="0 0 240 240">
+            <circle cx="120" cy="120" r="90" fill="none" stroke="rgba(255,255,255,.04)" stroke-width="28"/>
+            <!-- 40% = 226 of 565.5 -->
+            <circle cx="120" cy="120" r="90" fill="none" stroke="#21ce62" stroke-width="28"
+              stroke-dasharray="226 339" stroke-dashoffset="0" stroke-linecap="butt"/>
+            <!-- 25% = 141 -->
+            <circle cx="120" cy="120" r="90" fill="none" stroke="#1aad53" stroke-width="28"
+              stroke-dasharray="141 424" stroke-dashoffset="-226" stroke-linecap="butt"/>
+            <!-- 15% = 85 -->
+            <circle cx="120" cy="120" r="90" fill="none" stroke="#0dff7a" stroke-width="28"
+              stroke-dasharray="85 480" stroke-dashoffset="-367" stroke-linecap="butt"/>
+            <!-- 15% = 85 -->
+            <circle cx="120" cy="120" r="90" fill="none" stroke="#53d68a" stroke-width="28"
+              stroke-dasharray="85 480" stroke-dashoffset="-452" stroke-linecap="butt"/>
+            <!-- 5% = 28 -->
+            <circle cx="120" cy="120" r="90" fill="none" stroke="#9effc3" stroke-width="28"
+              stroke-dasharray="28 537" stroke-dashoffset="-537" stroke-linecap="butt"/>
+          </svg>
+          <div class="donut-center">
+            <span class="dc-num">1B</span>
+            <span class="dc-lbl">Total Supply</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: info card -->
+      <div class="tok-info-card reveal reveal-d2">
+        <h3>How Tokens Work</h3>
+        <ul class="tok-info-list">
+          <li>Unlock premium research and advanced analysis tools</li>
+          <li>Vote on new features and platform changes via governance</li>
+          <li>Earn rewards for contributing verified data sources</li>
+          <li>Access lower fees and faster support tiers</li>
+          <li>Use seamlessly across all Robinhood Chain apps</li>
+          <li>Team tokens locked with 12-month cliff, 36-month vesting</li>
+        </ul>
+        <a href="https://docs.privashhood.com/tokens" target="_blank" class="tok-link">
+          Full Token Documentation →
+        </a>
+
+        <!-- mini metrics -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px;padding-top:24px;border-top:1px solid var(--border);">
+          <div>
+            <p style="font-family:var(--mono);font-size:22px;font-weight:800;color:var(--green);">$PRVH</p>
+            <p style="font-size:12px;color:var(--txt-3);margin-top:2px;">Token Symbol (TBA)</p>
+          </div>
+          <div>
+            <p style="font-family:var(--mono);font-size:22px;font-weight:800;color:var(--green);">RH</p>
+            <p style="font-size:12px;color:var(--txt-3);margin-top:2px;">Native Chain</p>
+          </div>
+          <div>
+            <p style="font-family:var(--mono);font-size:22px;font-weight:800;color:var(--green);">1B</p>
+            <p style="font-size:12px;color:var(--txt-3);margin-top:2px;">Max Supply</p>
+          </div>
+          <div>
+            <p style="font-family:var(--mono);font-size:22px;font-weight:800;color:var(--green);">TBA</p>
+            <p style="font-size:12px;color:var(--txt-3);margin-top:2px;">Launch Date</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── ROADMAP ───── -->
+<section id="roadmap" class="section">
+  <div class="wrap">
+    <div class="sh reveal">
+      <p class="sh-label">Development Plans</p>
+      <h2 class="sh-title">Building Step by Step</h2>
+      <p class="sh-desc">Every milestone is shared publicly — no surprises, no hidden delays. Track our progress in real time.</p>
+    </div>
+
+    <div class="rm-track">
+      <div class="rm-item reveal reveal-d1">
+        <div class="rm-dot pending">Q1</div>
+        <div class="rm-body">
+          <p class="rm-status pending"><span class="indicator"></span> Upcoming</p>
+          <h4 class="rm-title">Platform Design &amp; Testing</h4>
+          <p class="rm-desc">Built core features, tested security architecture, and launched early access for Robinhood Chain community members. Completed full smart contract audit.</p>
+          <div class="rm-tags">
+            <span class="rm-tag">Core Build</span>
+            <span class="rm-tag">Security Audit</span>
+            <span class="rm-tag">Early Access</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rm-item reveal reveal-d2">
+        <div class="rm-dot pending">Q2</div>
+        <div class="rm-body">
+          <p class="rm-status pending"><span class="indicator"></span> Upcoming</p>
+          <h4 class="rm-title">Full Launch on Robinhood Chain</h4>
+          <p class="rm-desc">Public release with token launch. All research tools will be available for all users on the network.</p>
+          <div class="rm-tags">
+            <span class="rm-tag">Mainnet Launch</span>
+            <span class="rm-tag">Token Launch</span>
+            <span class="rm-tag">Public Access</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rm-item reveal reveal-d3">
+        <div class="rm-dot pending">Q3</div>
+        <div class="rm-body">
+          <p class="rm-status pending"><span class="indicator"></span> Upcoming</p>
+          <h4 class="rm-title">Wallet Integration &amp; Mobile</h4>
+          <p class="rm-desc">Support for all major RH Chain wallets, optimized mobile experience, and expanded market data sources with real-time feeds.</p>
+          <div class="rm-tags">
+            <span class="rm-tag">Mobile App</span>
+            <span class="rm-tag">Wallet Connect</span>
+            <span class="rm-tag">Live Data</span>
+            <a href="wallet.html" style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:var(--green);font-size:13px;font-weight:700;padding:8px 16px;border:1px solid rgba(33,206,98,.3);border-radius:8px;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='rgba(33,206,98,.08)'" onmouseout="this.style.background=''">Explore Wallet Features →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="rm-item reveal reveal-d4">
+        <div class="rm-dot pending">Q4</div>
+        <div class="rm-body">
+          <p class="rm-status pending"><span class="indicator"></span> Upcoming</p>
+          <h4 class="rm-title">Business &amp; Partner Tools</h4>
+          <p class="rm-desc">Custom reports for teams and institutions, deep integration with Robinhood Chain ecosystem apps, and enterprise-grade data coverage.</p>
+          <div class="rm-tags">
+            <span class="rm-tag">Enterprise API</span>
+            <span class="rm-tag">Custom Reports</span>
+            <span class="rm-tag">Ecosystem Bridge</span>
+            <a href="business.html" style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:var(--green);font-size:13px;font-weight:700;padding:8px 16px;border:1px solid rgba(33,206,98,.3);border-radius:8px;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='rgba(33,206,98,.08)'" onmouseout="this.style.background=''">Explore Business Tools →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── PARTNERS ───── -->
+<section class="section">
+  <div class="wrap">
+    <div class="sh reveal">
+      <p class="sh-label">Partners &amp; Supporters</p>
+      <h2 class="sh-title">Trusted Network</h2>
+      <p class="sh-desc">We work closely with teams building on Robinhood Chain to deliver the best possible experience.</p>
+    </div>
+  </div>
+  <div class="partners-bar reveal">
+    <div class="partners-scroll">
+      <span class="p-logo">Robinhood Chain</span>
+      <span class="p-logo">◆ RH Wallet</span>
+      <span class="p-logo">ChainSecurity</span>
+      <span class="p-logo">◆ DataTrust</span>
+      <span class="p-logo">DeFi Connect</span>
+      <span class="p-logo">◆ BlockCheck</span>
+      <span class="p-logo">OpenFinance</span>
+      <span class="p-logo">◆ ZK Verify</span>
+      <!-- duplicate for seamless loop -->
+      <span class="p-logo">Robinhood Chain</span>
+      <span class="p-logo">◆ RH Wallet</span>
+      <span class="p-logo">ChainSecurity</span>
+      <span class="p-logo">◆ DataTrust</span>
+      <span class="p-logo">DeFi Connect</span>
+      <span class="p-logo">◆ BlockCheck</span>
+      <span class="p-logo">OpenFinance</span>
+      <span class="p-logo">◆ ZK Verify</span>
+    </div>
+  </div>
+</section>
+
+<!-- ───── TEAM ───── -->
+<section id="team" class="section">
+  <div class="wrap">
+    <div class="sh reveal">
+      <p class="sh-label">Core Team</p>
+      <h2 class="sh-title">Builders &amp; Experts</h2>
+      <p class="sh-desc">Deep experience in finance, data privacy, and building on Robinhood Chain — focused on what matters most.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card reveal reveal-d1">
+        <div class="team-avatar">
+          <span>👤</span>
+          <span class="av-ring"></span>
+        </div>
+        <h3 class="team-name">Sam Rivera</h3>
+        <p class="team-role">Founder &amp; Lead Builder</p>
+        <p class="team-bio">8 years in fintech infrastructure, early contributor to Robinhood Chain tooling and developer ecosystem.</p>
+        <a href="https://x.com/sam_builds_rh" target="_blank" class="team-handle">𝕏 @sam_builds_rh</a>
+      </div>
+
+      <div class="team-card reveal reveal-d2">
+        <div class="team-avatar">
+          <span>📊</span>
+          <span class="av-ring"></span>
+        </div>
+        <h3 class="team-name">Jenny Tran</h3>
+        <p class="team-role">Head of Market Research</p>
+        <p class="team-bio">Former market analyst focused on retail crypto and Robinhood ecosystem trends, 6 years in DeFi research.</p>
+        <a href="https://x.com/jenny_rh_data" target="_blank" class="team-handle">𝕏 @jenny_rh_data</a>
+      </div>
+
+      <div class="team-card reveal reveal-d3">
+        <div class="team-avatar">
+          <span>🛠️</span>
+          <span class="av-ring"></span>
+        </div>
+        <h3 class="team-name">Mike Carter</h3>
+        <p class="team-role">Lead Developer</p>
+        <p class="team-bio">Specialist in user-friendly blockchain applications, built multiple tools that drove RH Chain adoption.</p>
+        <a href="https://x.com/mike_dev_rh" target="_blank" class="team-handle">𝕏 @mike_dev_rh</a>
+      </div>
+
+      <div class="team-card reveal reveal-d4">
+        <div class="team-avatar">
+          <span>🛡️</span>
+          <span class="av-ring"></span>
+        </div>
+        <h3 class="team-name">Luisa Mendez</h3>
+        <p class="team-role">Privacy &amp; Compliance Lead</p>
+        <p class="team-bio">Advisor on digital privacy standards for financial services and blockchain. Led compliance for 3 major protocols.</p>
+        <a href="https://x.com/luisa_privacy" target="_blank" class="team-handle">𝕏 @luisa_privacy</a>
+      </div>
+
+      <div class="team-card reveal reveal-d5">
+        <div class="team-avatar">
+          <span>📈</span>
+          <span class="av-ring"></span>
+        </div>
+        <h3 class="team-name">Tom Baker</h3>
+        <p class="team-role">Ecosystem Lead</p>
+        <p class="team-bio">Connects projects across Robinhood Chain, focused on safe and useful tools that serve everyday users.</p>
+        <a href="https://x.com/tom_rh_growth" target="_blank" class="team-handle">𝕏 @tom_rh_growth</a>
+      </div>
+
+      <div class="team-card reveal reveal-d6">
+        <div class="team-avatar">
+          <span>💡</span>
+          <span class="av-ring"></span>
+        </div>
+        <h3 class="team-name">Priya Patel</h3>
+        <p class="team-role">Product Advisor</p>
+        <p class="team-bio">Works on simple, clear designs for financial tools used by millions. UX lead at two fintech unicorns.</p>
+        <a href="https://x.com/priya_fintech" target="_blank" class="team-handle">𝕏 @priya_fintech</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── CTA BANNER ───── -->
+<div class="cta-banner">
+  <div class="wrap">
+    <div class="cta-inner reveal">
+      <h2>Research That Respects You</h2>
+      <p>Most platforms make you trade your privacy for information. On Robinhood Chain, everyone deserves clear answers — without giving up personal data.</p>
+      <div class="cta-btns">
+        <a href="app.html" target="_blank" class="btn btn-primary">
+          Start for Free
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="app.html" target="_blank" class="btn btn-ghost">Read the Docs</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ───── DOWNLOADS ───── -->
+<section class="section" id="downloads">
+  <div class="wrap">
+    <div class="sh reveal">
+      <p class="sh-label">Brand Kit</p>
+      <h2 class="sh-title">Download Assets</h2>
+      <p class="sh-desc">Official Privashhood logo and banner — free to use for community and press.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;" class="dl-grid">
+      <!-- Logo card -->
+      <div class="feat-card reveal reveal-d1" style="padding:28px;">
+        <div style="background:#060e09;border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:20px;display:flex;align-items:center;justify-content:center;padding:20px 12px;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" width="100%" style="width:100%;height:auto;">
+  <defs>
+    <linearGradient id="gGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#21ce62"/>
+      <stop offset="60%" stop-color="#0dff7a"/>
+      <stop offset="100%" stop-color="#7fffa6"/>
+    </linearGradient>
+    <linearGradient id="gGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#21ce62" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#21ce62" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softglow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- grid pattern -->
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(33,206,98,0.08)" stroke-width="0.8"/>
+    </pattern>
+    <clipPath id="iconClip">
+      <rect x="0" y="0" width="120" height="160" rx="28"/>
+    </clipPath>
+    <radialGradient id="iconBg" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#0d2018"/>
+      <stop offset="100%" stop-color="#060e09"/>
+    </radialGradient>
+  </defs>
+
+  <!-- bg -->
+  <rect width="520" height="160" rx="20" fill="#090e0a"/>
+  <rect width="520" height="160" rx="20" fill="url(#grid)"/>
+  <!-- ambient glow -->
+  <ellipse cx="100" cy="60" rx="160" ry="100" fill="rgba(33,206,98,0.07)"/>
+
+  <!-- ── ICON BLOCK ── -->
+  <g clip-path="url(#iconClip)">
+    <rect x="0" y="0" width="120" height="160" fill="url(#iconBg)"/>
+    <rect x="0" y="0" width="120" height="160" fill="url(#grid)"/>
+    <!-- border -->
+    <rect x="0.6" y="0.6" width="118.8" height="158.8" rx="27.5" fill="none"
+          stroke="url(#gGreen)" stroke-width="1.2" opacity="0.5"/>
+  </g>
+
+  <!-- shield shape -->
+  <path d="M60 26 L88 38 L88 72 Q88 98 60 112 Q32 98 32 72 L32 38 Z"
+        fill="rgba(33,206,98,0.1)" stroke="url(#gGreen)" stroke-width="1.5"
+        filter="url(#glow)"/>
+
+  <!-- inner shield gradient fill -->
+  <path d="M60 32 L83 43 L83 70 Q83 93 60 106 Q37 93 37 70 L37 43 Z"
+        fill="url(#gGlow)"/>
+
+  <!-- eye / privacy icon inside shield -->
+  <!-- eye outline -->
+  <ellipse cx="60" cy="68" rx="14" ry="9"
+           fill="none" stroke="#21ce62" stroke-width="1.8" opacity="0.9"/>
+  <!-- pupil -->
+  <circle cx="60" cy="68" r="4.5" fill="url(#gGreen)" filter="url(#softglow)"/>
+  <!-- pupil inner -->
+  <circle cx="60" cy="68" r="2" fill="#090e0a"/>
+  <!-- strike-through line (privacy/stealth) -->
+  <line x1="47" y1="55" x2="73" y2="82"
+        stroke="#21ce62" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- dot indicator bottom-right of icon -->
+  <circle cx="96" cy="130" r="6" fill="#21ce62" filter="url(#softglow)"/>
+  <circle cx="96" cy="130" r="3.5" fill="#090e0a"/>
+  <circle cx="96" cy="130" r="2" fill="#21ce62"/>
+
+  <!-- ── WORDMARK ── -->
+  <!-- "Priva" -->
+  <text x="140" y="92"
+        font-family="'JetBrains Mono', 'Courier New', monospace"
+        font-weight="800"
+        font-size="52"
+        letter-spacing="-2"
+        fill="#f0f5f0">Priva</text>
+
+  <!-- "shh" green gradient -->
+  <text x="283" y="92"
+        font-family="'JetBrains Mono', 'Courier New', monospace"
+        font-weight="800"
+        font-size="52"
+        letter-spacing="-2"
+        fill="url(#gGreen)"
+        filter="url(#glow)">shh</text>
+
+  <!-- "ood" -->
+  <text x="375" y="92"
+        font-family="'JetBrains Mono', 'Courier New', monospace"
+        font-weight="800"
+        font-size="52"
+        letter-spacing="-2"
+        fill="#f0f5f0">ood</text>
+
+  <!-- tagline -->
+  <text x="140" y="118"
+        font-family="'Inter', system-ui, sans-serif"
+        font-weight="500"
+        font-size="13"
+        letter-spacing="2.5"
+        fill="#5c6b5e"
+        text-transform="uppercase">PRIVACY-FIRST · ROBINHOOD CHAIN</text>
+
+  <!-- outer border -->
+  <rect x="0.75" y="0.75" width="518.5" height="158.5" rx="19.5" fill="none"
+        stroke="rgba(33,206,98,0.15)" stroke-width="1.5"/>
+</svg>
+
+        </div>
+        <h3 style="font-size:16px;font-weight:700;margin-bottom:6px;">Privashhood Logo</h3>
+        <p style="font-size:13px;color:var(--txt-2);margin-bottom:16px;">SVG vector &bull; 520 &times; 160px &bull; Dark background</p>
+        <a href="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20520%20160%22%20width%3D%22520%22%20height%3D%22160%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gGreen%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2321ce62%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2260%25%22%20stop-color%3D%22%230dff7a%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%237fffa6%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gGlow%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2321ce62%22%20stop-opacity%3D%220.35%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%2321ce62%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22glow%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%226%22%20result%3D%22blur%22%2F%3E%0A%20%20%20%20%20%20%3CfeMerge%3E%0A%20%20%20%20%20%20%20%20%3CfeMergeNode%20in%3D%22blur%22%2F%3E%0A%20%20%20%20%20%20%20%20%3CfeMergeNode%20in%3D%22SourceGraphic%22%2F%3E%0A%20%20%20%20%20%20%3C%2FfeMerge%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softglow%22%20x%3D%22-30%25%22%20y%3D%22-30%25%22%20width%3D%22160%25%22%20height%3D%22160%25%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%2212%22%20result%3D%22blur%22%2F%3E%0A%20%20%20%20%20%20%3CfeMerge%3E%0A%20%20%20%20%20%20%20%20%3CfeMergeNode%20in%3D%22blur%22%2F%3E%0A%20%20%20%20%20%20%20%20%3CfeMergeNode%20in%3D%22SourceGraphic%22%2F%3E%0A%20%20%20%20%20%20%3C%2FfeMerge%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3C!--%20grid%20pattern%20--%3E%0A%20%20%20%20%3Cpattern%20id%3D%22grid%22%20width%3D%2224%22%20height%3D%2224%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M%2024%200%20L%200%200%200%2024%22%20fill%3D%22none%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.08)%22%20stroke-width%3D%220.8%22%2F%3E%0A%20%20%20%20%3C%2Fpattern%3E%0A%20%20%20%20%3CclipPath%20id%3D%22iconClip%22%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22120%22%20height%3D%22160%22%20rx%3D%2228%22%2F%3E%0A%20%20%20%20%3C%2FclipPath%3E%0A%20%20%20%20%3CradialGradient%20id%3D%22iconBg%22%20cx%3D%2240%25%22%20cy%3D%2235%25%22%20r%3D%2265%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230d2018%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23060e09%22%2F%3E%0A%20%20%20%20%3C%2FradialGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%0A%20%20%3C!--%20bg%20--%3E%0A%20%20%3Crect%20width%3D%22520%22%20height%3D%22160%22%20rx%3D%2220%22%20fill%3D%22%23090e0a%22%2F%3E%0A%20%20%3Crect%20width%3D%22520%22%20height%3D%22160%22%20rx%3D%2220%22%20fill%3D%22url(%23grid)%22%2F%3E%0A%20%20%3C!--%20ambient%20glow%20--%3E%0A%20%20%3Cellipse%20cx%3D%22100%22%20cy%3D%2260%22%20rx%3D%22160%22%20ry%3D%22100%22%20fill%3D%22rgba(33%2C206%2C98%2C0.07)%22%2F%3E%0A%0A%20%20%3C!--%20%E2%94%80%E2%94%80%20ICON%20BLOCK%20%E2%94%80%E2%94%80%20--%3E%0A%20%20%3Cg%20clip-path%3D%22url(%23iconClip)%22%3E%0A%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22120%22%20height%3D%22160%22%20fill%3D%22url(%23iconBg)%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22120%22%20height%3D%22160%22%20fill%3D%22url(%23grid)%22%2F%3E%0A%20%20%20%20%3C!--%20border%20--%3E%0A%20%20%20%20%3Crect%20x%3D%220.6%22%20y%3D%220.6%22%20width%3D%22118.8%22%20height%3D%22158.8%22%20rx%3D%2227.5%22%20fill%3D%22none%22%0A%20%20%20%20%20%20%20%20%20%20stroke%3D%22url(%23gGreen)%22%20stroke-width%3D%221.2%22%20opacity%3D%220.5%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%0A%20%20%3C!--%20shield%20shape%20--%3E%0A%20%20%3Cpath%20d%3D%22M60%2026%20L88%2038%20L88%2072%20Q88%2098%2060%20112%20Q32%2098%2032%2072%20L32%2038%20Z%22%0A%20%20%20%20%20%20%20%20fill%3D%22rgba(33%2C206%2C98%2C0.1)%22%20stroke%3D%22url(%23gGreen)%22%20stroke-width%3D%221.5%22%0A%20%20%20%20%20%20%20%20filter%3D%22url(%23glow)%22%2F%3E%0A%0A%20%20%3C!--%20inner%20shield%20gradient%20fill%20--%3E%0A%20%20%3Cpath%20d%3D%22M60%2032%20L83%2043%20L83%2070%20Q83%2093%2060%20106%20Q37%2093%2037%2070%20L37%2043%20Z%22%0A%20%20%20%20%20%20%20%20fill%3D%22url(%23gGlow)%22%2F%3E%0A%0A%20%20%3C!--%20eye%20%2F%20privacy%20icon%20inside%20shield%20--%3E%0A%20%20%3C!--%20eye%20outline%20--%3E%0A%20%20%3Cellipse%20cx%3D%2260%22%20cy%3D%2268%22%20rx%3D%2214%22%20ry%3D%229%22%0A%20%20%20%20%20%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22%2321ce62%22%20stroke-width%3D%221.8%22%20opacity%3D%220.9%22%2F%3E%0A%20%20%3C!--%20pupil%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2268%22%20r%3D%224.5%22%20fill%3D%22url(%23gGreen)%22%20filter%3D%22url(%23softglow)%22%2F%3E%0A%20%20%3C!--%20pupil%20inner%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2268%22%20r%3D%222%22%20fill%3D%22%23090e0a%22%2F%3E%0A%20%20%3C!--%20strike-through%20line%20(privacy%2Fstealth)%20--%3E%0A%20%20%3Cline%20x1%3D%2247%22%20y1%3D%2255%22%20x2%3D%2273%22%20y2%3D%2282%22%0A%20%20%20%20%20%20%20%20stroke%3D%22%2321ce62%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.6%22%2F%3E%0A%0A%20%20%3C!--%20dot%20indicator%20bottom-right%20of%20icon%20--%3E%0A%20%20%3Ccircle%20cx%3D%2296%22%20cy%3D%22130%22%20r%3D%226%22%20fill%3D%22%2321ce62%22%20filter%3D%22url(%23softglow)%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2296%22%20cy%3D%22130%22%20r%3D%223.5%22%20fill%3D%22%23090e0a%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2296%22%20cy%3D%22130%22%20r%3D%222%22%20fill%3D%22%2321ce62%22%2F%3E%0A%0A%20%20%3C!--%20%E2%94%80%E2%94%80%20WORDMARK%20%E2%94%80%E2%94%80%20--%3E%0A%20%20%3C!--%20%22Priva%22%20--%3E%0A%20%20%3Ctext%20x%3D%22140%22%20y%3D%2292%22%0A%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20font-weight%3D%22800%22%0A%20%20%20%20%20%20%20%20font-size%3D%2252%22%0A%20%20%20%20%20%20%20%20letter-spacing%3D%22-2%22%0A%20%20%20%20%20%20%20%20fill%3D%22%23f0f5f0%22%3EPriva%3C%2Ftext%3E%0A%0A%20%20%3C!--%20%22shh%22%20green%20gradient%20--%3E%0A%20%20%3Ctext%20x%3D%22283%22%20y%3D%2292%22%0A%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20font-weight%3D%22800%22%0A%20%20%20%20%20%20%20%20font-size%3D%2252%22%0A%20%20%20%20%20%20%20%20letter-spacing%3D%22-2%22%0A%20%20%20%20%20%20%20%20fill%3D%22url(%23gGreen)%22%0A%20%20%20%20%20%20%20%20filter%3D%22url(%23glow)%22%3Eshh%3C%2Ftext%3E%0A%0A%20%20%3C!--%20%22ood%22%20--%3E%0A%20%20%3Ctext%20x%3D%22375%22%20y%3D%2292%22%0A%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20font-weight%3D%22800%22%0A%20%20%20%20%20%20%20%20font-size%3D%2252%22%0A%20%20%20%20%20%20%20%20letter-spacing%3D%22-2%22%0A%20%20%20%20%20%20%20%20fill%3D%22%23f0f5f0%22%3Eood%3C%2Ftext%3E%0A%0A%20%20%3C!--%20tagline%20--%3E%0A%20%20%3Ctext%20x%3D%22140%22%20y%3D%22118%22%0A%20%20%20%20%20%20%20%20font-family%3D%22'Inter'%2C%20system-ui%2C%20sans-serif%22%0A%20%20%20%20%20%20%20%20font-weight%3D%22500%22%0A%20%20%20%20%20%20%20%20font-size%3D%2213%22%0A%20%20%20%20%20%20%20%20letter-spacing%3D%222.5%22%0A%20%20%20%20%20%20%20%20fill%3D%22%235c6b5e%22%0A%20%20%20%20%20%20%20%20text-transform%3D%22uppercase%22%3EPRIVACY-FIRST%20%C2%B7%20ROBINHOOD%20CHAIN%3C%2Ftext%3E%0A%0A%20%20%3C!--%20outer%20border%20--%3E%0A%20%20%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%22518.5%22%20height%3D%22158.5%22%20rx%3D%2219.5%22%20fill%3D%22none%22%0A%20%20%20%20%20%20%20%20stroke%3D%22rgba(33%2C206%2C98%2C0.15)%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E%0A" download="privashhood-logo.svg" class="btn btn-primary" style="width:100%;justify-content:center;font-size:14px;padding:12px 20px;">
+          ↓ Download Logo SVG
+        </a>
+      </div>
+      <!-- Banner card -->
+      <div class="feat-card reveal reveal-d2" style="padding:28px;">
+        <div style="background:#060e09;border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:20px;max-height:120px;display:flex;align-items:center;justify-content:center;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="100%" style="max-height:120px;width:100%;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060d08"/>
+      <stop offset="50%" stop-color="#090e0a"/>
+      <stop offset="100%" stop-color="#050b07"/>
+    </linearGradient>
+    <linearGradient id="gGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#21ce62"/>
+      <stop offset="55%" stop-color="#0dff7a"/>
+      <stop offset="100%" stop-color="#7fffa6"/>
+    </linearGradient>
+    <linearGradient id="gGreenText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#21ce62"/>
+      <stop offset="50%" stop-color="#0dff7a"/>
+      <stop offset="100%" stop-color="#7fffa6"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#21ce62"/>
+      <stop offset="100%" stop-color="rgba(33,206,98,0)"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#21ce62" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#21ce62" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#21ce62" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#21ce62" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="iconGlow">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- grid -->
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(33,206,98,0.055)" stroke-width="0.8"/>
+    </pattern>
+    <!-- dot grid -->
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(33,206,98,0.12)"/>
+    </pattern>
+    <clipPath id="clip">
+      <rect width="1500" height="500"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <!-- base -->
+    <rect width="1500" height="500" fill="url(#bgGrad)"/>
+    <!-- grid -->
+    <rect width="1500" height="500" fill="url(#grid)"/>
+
+    <!-- ambient glows -->
+    <ellipse cx="200" cy="250" rx="520" ry="380" fill="url(#glow1)" filter="url(#blur1)"/>
+    <ellipse cx="1350" cy="180" rx="340" ry="260" fill="url(#glow2)" filter="url(#blur1)"/>
+    <ellipse cx="750" cy="500" rx="600" ry="200" fill="rgba(33,206,98,0.04)" filter="url(#blur1)"/>
+
+    <!-- decorative circles right side -->
+    <circle cx="1250" cy="250" r="280"
+            fill="none" stroke="rgba(33,206,98,0.06)" stroke-width="1.5"/>
+    <circle cx="1250" cy="250" r="200"
+            fill="none" stroke="rgba(33,206,98,0.04)" stroke-width="1"/>
+    <circle cx="1250" cy="250" r="120"
+            fill="none" stroke="rgba(33,206,98,0.08)" stroke-width="1"/>
+    <!-- inner circle fill -->
+    <circle cx="1250" cy="250" r="80"
+            fill="rgba(33,206,98,0.04)"/>
+
+    <!-- shield / icon -->
+    <g transform="translate(1170, 170)">
+      <!-- shield path -->
+      <path d="M80 10 L145 40 L145 110 Q145 170 80 200 Q15 170 15 110 L15 40 Z"
+            fill="rgba(33,206,98,0.08)" stroke="url(#gGreen)" stroke-width="1.8"
+            filter="url(#iconGlow)"/>
+      <!-- eye -->
+      <ellipse cx="80" cy="108" rx="22" ry="14"
+               fill="none" stroke="#21ce62" stroke-width="2" opacity="0.9"/>
+      <circle cx="80" cy="108" r="7" fill="url(#gGreen)" filter="url(#iconGlow)"/>
+      <circle cx="80" cy="108" r="3" fill="#090e0a"/>
+      <line x1="62" y1="90" x2="98" y2="128"
+            stroke="#21ce62" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+      <!-- dot -->
+      <circle cx="130" cy="174" r="7" fill="#21ce62" filter="url(#iconGlow)" opacity="0.9"/>
+      <circle cx="130" cy="174" r="3.5" fill="#090e0a"/>
+      <circle cx="130" cy="174" r="2" fill="#21ce62"/>
+    </g>
+
+    <!-- dot grid overlay right -->
+    <rect x="900" y="0" width="600" height="500" fill="url(#dots)" opacity="0.5"/>
+
+    <!-- left accent line -->
+    <rect x="80" y="200" width="3" height="120" rx="2"
+          fill="url(#lineGrad)"/>
+
+    <!-- ── MAIN TEXT ── -->
+    <!-- badge pill -->
+    <rect x="120" y="120" width="330" height="32" rx="16"
+          fill="rgba(33,206,98,0.12)" stroke="rgba(33,206,98,0.3)" stroke-width="1"/>
+    <!-- badge dot -->
+    <circle cx="139" cy="136" r="5" fill="#21ce62"/>
+    <circle cx="139" cy="136" r="9" fill="rgba(33,206,98,0)" stroke="#21ce62" stroke-width="1"
+            opacity="0.5"/>
+    <text x="155" y="141"
+          font-family="'JetBrains Mono', 'Courier New', monospace"
+          font-size="12" font-weight="700"
+          fill="#21ce62" letter-spacing="2">ROBINHOOD CHAIN NATIVE</text>
+
+    <!-- main wordmark -->
+    <text x="116" y="270"
+          font-family="'JetBrains Mono', 'Courier New', monospace"
+          font-size="112" font-weight="800"
+          letter-spacing="-4"
+          fill="#f0f5f0">Priva</text>
+
+    <text x="508" y="270"
+          font-family="'JetBrains Mono', 'Courier New', monospace"
+          font-size="112" font-weight="800"
+          letter-spacing="-4"
+          fill="url(#gGreenText)"
+          filter="url(#textGlow)">shh</text>
+
+    <text x="704" y="270"
+          font-family="'JetBrains Mono', 'Courier New', monospace"
+          font-size="112" font-weight="800"
+          letter-spacing="-4"
+          fill="#f0f5f0">ood</text>
+
+    <!-- tagline -->
+    <text x="120" y="318"
+          font-family="'Inter', system-ui, sans-serif"
+          font-size="17" font-weight="400"
+          fill="#6e7f70" letter-spacing="0.3">Privacy-first research platform built natively on Robinhood Chain</text>
+
+    <!-- divider line -->
+    <rect x="120" y="345" width="600" height="1" rx="0.5" fill="rgba(33,206,98,0.2)"/>
+
+    <!-- stats row -->
+    <!-- stat 1 -->
+    <text x="120" y="382"
+          font-family="'JetBrains Mono', 'Courier New', monospace"
+          font-size="22" font-weight="800" fill="#21ce62">100%</text>
+    <text x="120" y="402"
+          font-family="'Inter', system-ui, sans-serif"
+          font-size="11" font-weight="600" fill="#4a5a4c" letter-spacing="1.5">PRIVATE</text>
+
+    <rect x="228" y="368" width="1" height="40" fill="rgba(255,255,255,0.08)"/>
+
+    <!-- stat 2 -->
+    <text x="248" y="382"
+          font-family="'JetBrains Mono', 'Courier New', monospace"
+          font-size="22" font-weight="800" fill="#21ce62">28K+</text>
+    <text x="248" y="402"
+          font-family="'Inter', system-ui, sans-serif"
+          font-size="11" font-weight="600" fill="#4a5a4c" letter-spacing="1.5">USERS</text>
+
+    <rect x="346" y="368" width="1" height="40" fill="rgba(255,255,255,0.08)"/>
+
+    <!-- stat 3 -->
+    <text x="366" y="382"
+          font-family="'JetBrains Mono', 'Courier New', monospace"
+          font-size="22" font-weight="800" fill="#21ce62">0</text>
+    <text x="366" y="402"
+          font-family="'Inter', system-ui, sans-serif"
+          font-size="11" font-weight="600" fill="#4a5a4c" letter-spacing="1.5">DATA SHARED</text>
+
+    <rect x="484" y="368" width="1" height="40" fill="rgba(255,255,255,0.08)"/>
+
+    <!-- stat 4 -->
+    <text x="504" y="382"
+          font-family="'JetBrains Mono', 'Courier New', monospace"
+          font-size="22" font-weight="800" fill="#21ce62">Live</text>
+    <text x="504" y="402"
+          font-family="'Inter', system-ui, sans-serif"
+          font-size="11" font-weight="600" fill="#4a5a4c" letter-spacing="1.5">MAINNET</text>
+
+    <!-- URL bottom right -->
+    <text x="1380" y="472"
+          font-family="'JetBrains Mono', 'Courier New', monospace"
+          font-size="12" font-weight="600"
+          fill="#3a4a3c" text-anchor="end" letter-spacing="1">privashhood.com</text>
+
+    <!-- outer border -->
+    <rect x="0.75" y="0.75" width="1498.5" height="498.5" fill="none"
+          stroke="rgba(33,206,98,0.12)" stroke-width="1.5"/>
+
+    <!-- corner accents -->
+    <path d="M 0 30 L 0 0 L 30 0" fill="none" stroke="rgba(33,206,98,0.5)" stroke-width="2"/>
+    <path d="M 1500 30 L 1500 0 L 1470 0" fill="none" stroke="rgba(33,206,98,0.5)" stroke-width="2"/>
+    <path d="M 0 470 L 0 500 L 30 500" fill="none" stroke="rgba(33,206,98,0.5)" stroke-width="2"/>
+    <path d="M 1500 470 L 1500 500 L 1470 500" fill="none" stroke="rgba(33,206,98,0.5)" stroke-width="2"/>
+  </g>
+</svg>
+
+        </div>
+        <h3 style="font-size:16px;font-weight:700;margin-bottom:6px;">Privashhood Banner</h3>
+        <p style="font-size:13px;color:var(--txt-2);margin-bottom:16px;">SVG vector &bull; 1500 &times; 500px &bull; Twitter / OG ready</p>
+        <a href="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201500%20500%22%20width%3D%221500%22%20height%3D%22500%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23060d08%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23090e0a%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23050b07%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gGreen%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2321ce62%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2255%25%22%20stop-color%3D%22%230dff7a%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%237fffa6%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gGreenText%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%220%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2321ce62%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%230dff7a%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%237fffa6%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22lineGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%220%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2321ce62%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22rgba(33%2C206%2C98%2C0)%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3CradialGradient%20id%3D%22glow1%22%20cx%3D%2250%25%22%20cy%3D%2250%25%22%20r%3D%2250%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2321ce62%22%20stop-opacity%3D%220.22%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%2321ce62%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%3C%2FradialGradient%3E%0A%20%20%20%20%3CradialGradient%20id%3D%22glow2%22%20cx%3D%2250%25%22%20cy%3D%2250%25%22%20r%3D%2250%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2321ce62%22%20stop-opacity%3D%220.12%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%2321ce62%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%3C%2FradialGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22blur1%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%2260%22%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3Cfilter%20id%3D%22blur2%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%2230%22%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3Cfilter%20id%3D%22textGlow%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%228%22%20result%3D%22b%22%2F%3E%0A%20%20%20%20%20%20%3CfeMerge%3E%3CfeMergeNode%20in%3D%22b%22%2F%3E%3CfeMergeNode%20in%3D%22SourceGraphic%22%2F%3E%3C%2FfeMerge%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3Cfilter%20id%3D%22iconGlow%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%224%22%20result%3D%22b%22%2F%3E%0A%20%20%20%20%20%20%3CfeMerge%3E%3CfeMergeNode%20in%3D%22b%22%2F%3E%3CfeMergeNode%20in%3D%22SourceGraphic%22%2F%3E%3C%2FfeMerge%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3C!--%20grid%20--%3E%0A%20%20%20%20%3Cpattern%20id%3D%22grid%22%20width%3D%2248%22%20height%3D%2248%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M%2048%200%20L%200%200%200%2048%22%20fill%3D%22none%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.055)%22%20stroke-width%3D%220.8%22%2F%3E%0A%20%20%20%20%3C%2Fpattern%3E%0A%20%20%20%20%3C!--%20dot%20grid%20--%3E%0A%20%20%20%20%3Cpattern%20id%3D%22dots%22%20width%3D%2232%22%20height%3D%2232%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%221%22%20cy%3D%221%22%20r%3D%221%22%20fill%3D%22rgba(33%2C206%2C98%2C0.12)%22%2F%3E%0A%20%20%20%20%3C%2Fpattern%3E%0A%20%20%20%20%3CclipPath%20id%3D%22clip%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%221500%22%20height%3D%22500%22%2F%3E%0A%20%20%20%20%3C%2FclipPath%3E%0A%20%20%3C%2Fdefs%3E%0A%0A%20%20%3Cg%20clip-path%3D%22url(%23clip)%22%3E%0A%20%20%20%20%3C!--%20base%20--%3E%0A%20%20%20%20%3Crect%20width%3D%221500%22%20height%3D%22500%22%20fill%3D%22url(%23bgGrad)%22%2F%3E%0A%20%20%20%20%3C!--%20grid%20--%3E%0A%20%20%20%20%3Crect%20width%3D%221500%22%20height%3D%22500%22%20fill%3D%22url(%23grid)%22%2F%3E%0A%0A%20%20%20%20%3C!--%20ambient%20glows%20--%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22200%22%20cy%3D%22250%22%20rx%3D%22520%22%20ry%3D%22380%22%20fill%3D%22url(%23glow1)%22%20filter%3D%22url(%23blur1)%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%221350%22%20cy%3D%22180%22%20rx%3D%22340%22%20ry%3D%22260%22%20fill%3D%22url(%23glow2)%22%20filter%3D%22url(%23blur1)%22%2F%3E%0A%20%20%20%20%3Cellipse%20cx%3D%22750%22%20cy%3D%22500%22%20rx%3D%22600%22%20ry%3D%22200%22%20fill%3D%22rgba(33%2C206%2C98%2C0.04)%22%20filter%3D%22url(%23blur1)%22%2F%3E%0A%0A%20%20%20%20%3C!--%20decorative%20circles%20right%20side%20--%3E%0A%20%20%20%20%3Ccircle%20cx%3D%221250%22%20cy%3D%22250%22%20r%3D%22280%22%0A%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.06)%22%20stroke-width%3D%221.5%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%221250%22%20cy%3D%22250%22%20r%3D%22200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.04)%22%20stroke-width%3D%221%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%221250%22%20cy%3D%22250%22%20r%3D%22120%22%0A%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.08)%22%20stroke-width%3D%221%22%2F%3E%0A%20%20%20%20%3C!--%20inner%20circle%20fill%20--%3E%0A%20%20%20%20%3Ccircle%20cx%3D%221250%22%20cy%3D%22250%22%20r%3D%2280%22%0A%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22rgba(33%2C206%2C98%2C0.04)%22%2F%3E%0A%0A%20%20%20%20%3C!--%20shield%20%2F%20icon%20--%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(1170%2C%20170)%22%3E%0A%20%20%20%20%20%20%3C!--%20shield%20path%20--%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M80%2010%20L145%2040%20L145%20110%20Q145%20170%2080%20200%20Q15%20170%2015%20110%20L15%2040%20Z%22%0A%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22rgba(33%2C206%2C98%2C0.08)%22%20stroke%3D%22url(%23gGreen)%22%20stroke-width%3D%221.8%22%0A%20%20%20%20%20%20%20%20%20%20%20%20filter%3D%22url(%23iconGlow)%22%2F%3E%0A%20%20%20%20%20%20%3C!--%20eye%20--%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%2280%22%20cy%3D%22108%22%20rx%3D%2222%22%20ry%3D%2214%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22%2321ce62%22%20stroke-width%3D%222%22%20opacity%3D%220.9%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2280%22%20cy%3D%22108%22%20r%3D%227%22%20fill%3D%22url(%23gGreen)%22%20filter%3D%22url(%23iconGlow)%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2280%22%20cy%3D%22108%22%20r%3D%223%22%20fill%3D%22%23090e0a%22%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%2262%22%20y1%3D%2290%22%20x2%3D%2298%22%20y2%3D%22128%22%0A%20%20%20%20%20%20%20%20%20%20%20%20stroke%3D%22%2321ce62%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.5%22%2F%3E%0A%20%20%20%20%20%20%3C!--%20dot%20--%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%22130%22%20cy%3D%22174%22%20r%3D%227%22%20fill%3D%22%2321ce62%22%20filter%3D%22url(%23iconGlow)%22%20opacity%3D%220.9%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%22130%22%20cy%3D%22174%22%20r%3D%223.5%22%20fill%3D%22%23090e0a%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%22130%22%20cy%3D%22174%22%20r%3D%222%22%20fill%3D%22%2321ce62%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%0A%20%20%20%20%3C!--%20dot%20grid%20overlay%20right%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22900%22%20y%3D%220%22%20width%3D%22600%22%20height%3D%22500%22%20fill%3D%22url(%23dots)%22%20opacity%3D%220.5%22%2F%3E%0A%0A%20%20%20%20%3C!--%20left%20accent%20line%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2280%22%20y%3D%22200%22%20width%3D%223%22%20height%3D%22120%22%20rx%3D%222%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22url(%23lineGrad)%22%2F%3E%0A%0A%20%20%20%20%3C!--%20%E2%94%80%E2%94%80%20MAIN%20TEXT%20%E2%94%80%E2%94%80%20--%3E%0A%20%20%20%20%3C!--%20badge%20pill%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22120%22%20y%3D%22120%22%20width%3D%22330%22%20height%3D%2232%22%20rx%3D%2216%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22rgba(33%2C206%2C98%2C0.12)%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.3)%22%20stroke-width%3D%221%22%2F%3E%0A%20%20%20%20%3C!--%20badge%20dot%20--%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22139%22%20cy%3D%22136%22%20r%3D%225%22%20fill%3D%22%2321ce62%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22139%22%20cy%3D%22136%22%20r%3D%229%22%20fill%3D%22rgba(33%2C206%2C98%2C0)%22%20stroke%3D%22%2321ce62%22%20stroke-width%3D%221%22%0A%20%20%20%20%20%20%20%20%20%20%20%20opacity%3D%220.5%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22155%22%20y%3D%22141%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2212%22%20font-weight%3D%22700%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22%2321ce62%22%20letter-spacing%3D%222%22%3EROBINHOOD%20CHAIN%20NATIVE%3C%2Ftext%3E%0A%0A%20%20%20%20%3C!--%20main%20wordmark%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22116%22%20y%3D%22270%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%22112%22%20font-weight%3D%22800%22%0A%20%20%20%20%20%20%20%20%20%20letter-spacing%3D%22-4%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22%23f0f5f0%22%3EPriva%3C%2Ftext%3E%0A%0A%20%20%20%20%3Ctext%20x%3D%22508%22%20y%3D%22270%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%22112%22%20font-weight%3D%22800%22%0A%20%20%20%20%20%20%20%20%20%20letter-spacing%3D%22-4%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22url(%23gGreenText)%22%0A%20%20%20%20%20%20%20%20%20%20filter%3D%22url(%23textGlow)%22%3Eshh%3C%2Ftext%3E%0A%0A%20%20%20%20%3Ctext%20x%3D%22704%22%20y%3D%22270%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%22112%22%20font-weight%3D%22800%22%0A%20%20%20%20%20%20%20%20%20%20letter-spacing%3D%22-4%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22%23f0f5f0%22%3Eood%3C%2Ftext%3E%0A%0A%20%20%20%20%3C!--%20tagline%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22120%22%20y%3D%22318%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'Inter'%2C%20system-ui%2C%20sans-serif%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2217%22%20font-weight%3D%22400%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22%236e7f70%22%20letter-spacing%3D%220.3%22%3EPrivacy-first%20research%20platform%20built%20natively%20on%20Robinhood%20Chain%3C%2Ftext%3E%0A%0A%20%20%20%20%3C!--%20divider%20line%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22120%22%20y%3D%22345%22%20width%3D%22600%22%20height%3D%221%22%20rx%3D%220.5%22%20fill%3D%22rgba(33%2C206%2C98%2C0.2)%22%2F%3E%0A%0A%20%20%20%20%3C!--%20stats%20row%20--%3E%0A%20%20%20%20%3C!--%20stat%201%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22120%22%20y%3D%22382%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2222%22%20font-weight%3D%22800%22%20fill%3D%22%2321ce62%22%3E100%25%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22120%22%20y%3D%22402%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'Inter'%2C%20system-ui%2C%20sans-serif%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2211%22%20font-weight%3D%22600%22%20fill%3D%22%234a5a4c%22%20letter-spacing%3D%221.5%22%3EPRIVATE%3C%2Ftext%3E%0A%0A%20%20%20%20%3Crect%20x%3D%22228%22%20y%3D%22368%22%20width%3D%221%22%20height%3D%2240%22%20fill%3D%22rgba(255%2C255%2C255%2C0.08)%22%2F%3E%0A%0A%20%20%20%20%3C!--%20stat%202%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22248%22%20y%3D%22382%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2222%22%20font-weight%3D%22800%22%20fill%3D%22%2321ce62%22%3E28K%2B%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22248%22%20y%3D%22402%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'Inter'%2C%20system-ui%2C%20sans-serif%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2211%22%20font-weight%3D%22600%22%20fill%3D%22%234a5a4c%22%20letter-spacing%3D%221.5%22%3EUSERS%3C%2Ftext%3E%0A%0A%20%20%20%20%3Crect%20x%3D%22346%22%20y%3D%22368%22%20width%3D%221%22%20height%3D%2240%22%20fill%3D%22rgba(255%2C255%2C255%2C0.08)%22%2F%3E%0A%0A%20%20%20%20%3C!--%20stat%203%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22366%22%20y%3D%22382%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2222%22%20font-weight%3D%22800%22%20fill%3D%22%2321ce62%22%3E0%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22366%22%20y%3D%22402%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'Inter'%2C%20system-ui%2C%20sans-serif%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2211%22%20font-weight%3D%22600%22%20fill%3D%22%234a5a4c%22%20letter-spacing%3D%221.5%22%3EDATA%20SHARED%3C%2Ftext%3E%0A%0A%20%20%20%20%3Crect%20x%3D%22484%22%20y%3D%22368%22%20width%3D%221%22%20height%3D%2240%22%20fill%3D%22rgba(255%2C255%2C255%2C0.08)%22%2F%3E%0A%0A%20%20%20%20%3C!--%20stat%204%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%22504%22%20y%3D%22382%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2222%22%20font-weight%3D%22800%22%20fill%3D%22%2321ce62%22%3ELive%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22504%22%20y%3D%22402%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'Inter'%2C%20system-ui%2C%20sans-serif%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2211%22%20font-weight%3D%22600%22%20fill%3D%22%234a5a4c%22%20letter-spacing%3D%221.5%22%3EMAINNET%3C%2Ftext%3E%0A%0A%20%20%20%20%3C!--%20URL%20bottom%20right%20--%3E%0A%20%20%20%20%3Ctext%20x%3D%221380%22%20y%3D%22472%22%0A%20%20%20%20%20%20%20%20%20%20font-family%3D%22'JetBrains%20Mono'%2C%20'Courier%20New'%2C%20monospace%22%0A%20%20%20%20%20%20%20%20%20%20font-size%3D%2212%22%20font-weight%3D%22600%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22%233a4a3c%22%20text-anchor%3D%22end%22%20letter-spacing%3D%221%22%3Eprivashhood.com%3C%2Ftext%3E%0A%0A%20%20%20%20%3C!--%20outer%20border%20--%3E%0A%20%20%20%20%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%221498.5%22%20height%3D%22498.5%22%20fill%3D%22none%22%0A%20%20%20%20%20%20%20%20%20%20stroke%3D%22rgba(33%2C206%2C98%2C0.12)%22%20stroke-width%3D%221.5%22%2F%3E%0A%0A%20%20%20%20%3C!--%20corner%20accents%20--%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%200%2030%20L%200%200%20L%2030%200%22%20fill%3D%22none%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.5)%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%201500%2030%20L%201500%200%20L%201470%200%22%20fill%3D%22none%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.5)%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%200%20470%20L%200%20500%20L%2030%20500%22%20fill%3D%22none%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.5)%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%201500%20470%20L%201500%20500%20L%201470%20500%22%20fill%3D%22none%22%20stroke%3D%22rgba(33%2C206%2C98%2C0.5)%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A" download="privashhood-banner.svg" class="btn btn-primary" style="width:100%;justify-content:center;font-size:14px;padding:12px 20px;">
+          ↓ Download Banner SVG
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ───── FOOTER ───── -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="logo">Priva<span class="g">shh</span>ood<span class="dot"></span></div>
+        <p>Privacy-first research platform built natively on Robinhood Chain. Your data stays yours.</p>
+      </div>
+
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Product</h4>
+          <a href="app.html" target="_blank">Launch App</a>
+          <a href="app.html" target="_blank">Documentation</a>
+          <a href="https://blog.privashhood.com" target="_blank">Updates</a>
+          <a href="https://overview.privashhood.com" target="_blank">Whitepaper</a>
+        </div>
+        <div class="foot-col">
+          <h4>Community</h4>
+          <a href="https://x.com/privashhood" target="_blank">X / Twitter</a>
+          <a href="https://discord.gg/privashhood" target="_blank">Discord</a>
+          <a href="https://github.com/privashhood" target="_blank">GitHub</a>
+        </div>
+        <div class="foot-col">
+          <h4>Legal</h4>
+          <a href="https://privashhood.com/terms" target="_blank">Terms of Use</a>
+          <a href="https://privashhood.com/privacy" target="_blank">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <p>© 2026 Privashhood. Built natively on Robinhood Chain.</p>
+      <div class="foot-socials">
+        <a href="https://x.com/privashhood" target="_blank" title="X / Twitter">𝕏</a>
+        <a href="https://discord.gg/privashhood" target="_blank" title="Discord">💬</a>
+        <a href="https://github.com/privashhood" target="_blank" title="GitHub">⌥</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ── Sticky nav shadow
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // ── Hamburger toggle
+  const hbg = document.getElementById('hamburger');
+  const mob = document.getElementById('mob-menu');
+  hbg.addEventListener('click', () => {
+    mob.classList.toggle('open');
+  });
+  document.querySelectorAll('.mob-menu a').forEach(a =>
+    a.addEventListener('click', () => mob.classList.remove('open'))
+  );
+
+  // ── Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ── Mouse radial on feature cards
+  document.querySelectorAll('.feat-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+      card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+    });
+  });
+
+  // ── Animated counters
+  function animateCount(el) {
+    const target = parseInt(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    if (!target) return;
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+    const timer = setInterval(() => {
+      current = Math.min(current + step, target);
+      if (target >= 1000) {
+        el.textContent = (current / 1000).toFixed(1) + suffix;
+      } else {
+        el.textContent = Math.floor(current) + suffix;
+      }
+      if (current >= target) clearInterval(timer);
+    }, 16);
+  }
+  const countObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && e.target.dataset.target) {
+        animateCount(e.target);
+        countObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-target]').forEach(el => countObs.observe(el));
+</script>
+</body>
+</html>
